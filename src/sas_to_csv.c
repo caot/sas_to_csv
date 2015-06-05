@@ -762,7 +762,7 @@ void write_char(FILE *out_file, byte *str, int length) {
   char *char_str = byte_str;
   char_str = trim(char_str);
 
-  fprintf(out_file,"\"%s\"",char_str);
+  fprintf(out_file,"%s",char_str);
   
   free(char_str);
 }
