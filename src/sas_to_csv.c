@@ -712,7 +712,7 @@ void write_meta_info(FILE *info_file, meta_info *ptr) {
 void write_header(FILE *out_file, col_info *col_info_ptr) {
   int i;
   for (i = 0; i < col_info_ptr-> count; i++) {
-    fprintf(out_file, "\"%s\"",col_info_ptr->cols[i]->name);
+    fprintf(out_file, "%s",col_info_ptr->cols[i]->name);
     if (i != col_info_ptr-> count - 1) fprintf(out_file,",");
   }
   fprintf(out_file, "\n");
